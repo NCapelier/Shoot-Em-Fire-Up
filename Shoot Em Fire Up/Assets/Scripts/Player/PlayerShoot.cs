@@ -31,7 +31,7 @@ namespace Game
             if(Input.GetKey(KeyCode.Space) && canShoot)
             {
                 StartCoroutine(ShootCooldown());
-                Instantiate(Resources.Load("Prefabs/Player/Bullet"), gameObject.transform.position, Quaternion.identity);
+                Instantiate(Resources.Load("Prefabs/Player/Tir"), gameObject.transform.position, Quaternion.identity);
             }
         }
 

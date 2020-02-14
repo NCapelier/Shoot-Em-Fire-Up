@@ -19,5 +19,11 @@ public class TirsPrefabBehaiviour : MonoBehaviour
     void Update()
     {
         rb.velocity = Vector2.up*speed;
+
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
