@@ -83,7 +83,7 @@ namespace Game
 
             if(Input.GetKeyDown(KeyCode.UpArrow))
             {
-                Heal = 1;
+                points += 10;
             }
             if(Input.GetKeyDown(KeyCode.DownArrow))
             {
@@ -98,52 +98,52 @@ namespace Game
 
         void BonusHp()
         {
-            if(hp > 100 && s1 == false)
+            if(points > 100 && s1 == false)
             {
                 s1 = true;
                 hp++;
             }
-            else if (hp > 200 && s2 == false)
+            else if (points > 200 && s2 == false)
             {
                 s2 = true;
                 hp++;
             }
-            else if(hp > 300 && s3 == false)
+            else if(points > 300 && s3 == false)
             {
                 s3 = true;
                 hp++;
             }
-            else if(hp > 400 && s4 == false)
+            else if(points > 400 && s4 == false)
             {
                 s4 = true;
                 hp++;
             }
-            else if(hp > 500 && s5 == false)
+            else if(points > 500 && s5 == false)
             {
                 s5 = true;
                 hp++;
             }
-            else if(hp > 600 && s6 == false)
+            else if(points > 600 && s6 == false)
             {
                 s6 = true;
                 hp++;
             }
-            else if(hp > 700 && s7 == false)
+            else if(points > 700 && s7 == false)
             {
                 s7 = true;
                 hp++;
             }
-            else if(hp > 800 && s8 == false)
+            else if(points > 800 && s8 == false)
             {
                 s8 = true;
                 hp++;
             }
-            else if(hp > 900 && s9 == false)
+            else if(points > 900 && s9 == false)
             {
                 s9 = true;
                 hp++;
             }
-            else if(hp > 1000 && s10 == false)
+            else if(points > 1000 && s10 == false)
             {
                 s10 = true;
                 hp++;
