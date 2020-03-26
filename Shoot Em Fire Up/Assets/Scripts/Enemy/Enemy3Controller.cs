@@ -63,7 +63,7 @@ namespace Game
 
         IEnumerator Tempo()
         {
-            yield return new WaitForSeconds(Random.Range(1.5f, 3.5f));
+            yield return new WaitForSeconds(Random.Range(1.5f, 1.6f));
             int i = Random.Range(0, 2);
             if (i == 0)
             {

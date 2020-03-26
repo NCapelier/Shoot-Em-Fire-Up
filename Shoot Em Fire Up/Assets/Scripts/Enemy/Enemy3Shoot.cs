@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Enemy2Shoot : MonoBehaviour
+    public class Enemy3Shoot : MonoBehaviour
     {
         //shoot cooldown variables
         bool canShoot = true;
@@ -31,7 +31,8 @@ namespace Game
             if(canShoot)
             {
                 StartCoroutine(ShootCooldown());
-                Instantiate(Resources.Load("Prefabs/Enemies/Tir 2"), gameObject.transform.position, Quaternion.identity);
+                Instantiate(Resources.Load("Prefabs/Enemies/Tir 3 1"), gameObject.transform.position, Quaternion.identity);
+                Instantiate(Resources.Load("Prefabs/Enemies/Tir 3 2"), gameObject.transform.position, Quaternion.identity);
             }
         }
 

@@ -4,29 +4,31 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Enemy2Collider : MonoBehaviour
+    public class TirDamages : MonoBehaviour
     {
-        public bool onTouch = false;
-
+        
+        
+        
         void Awake()
         {
-
+            
         }
-
+        
         void Start()
         {
+            
         }
-
+        
         void Update()
         {
-
+            
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Wall")
+            if(collision.tag == "Player")
             {
-                onTouch = true;
+                collision.GetComponent<PlayerManager>().TakeDamage = 1;
             }
         }
 

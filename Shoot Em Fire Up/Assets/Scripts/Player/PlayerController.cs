@@ -10,7 +10,7 @@ namespace Game
     public class PlayerController : MonoBehaviour
     {
         // Player speed
-        [Range(0f, 1000)]
+        [Range(0f, 1500)]
         [SerializeField] float speed = 1;
 
         //Player's rb

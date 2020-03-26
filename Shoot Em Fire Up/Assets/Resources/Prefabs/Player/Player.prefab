@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
-  startingHp: 50
+  startingHp: 15
   hpText: {fileID: 4445389536376553531}
 --- !u!61 &4804596438725916889
 BoxCollider2D:
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000011920929, y: 0.0072487593}
@@ -398,7 +398,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.02174139, y: 0.0072467327}
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8fe9696c527674fa5be559ea0bb2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1200
 --- !u!1 &9126402166524204739
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,4 +470,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5ace2a2f9d8154bb9fc65d1138a12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 1
+  cooldownTime: 0.2

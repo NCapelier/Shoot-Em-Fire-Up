@@ -26,4 +26,5 @@ public class TirsPrefabBehaiviour : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }

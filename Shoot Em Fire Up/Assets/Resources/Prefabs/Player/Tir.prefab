@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1801562968699342918}
   m_Layer: 0
   m_Name: Tir
-  m_TagString: Untagged
+  m_TagString: PlayerShoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f7bb878a2b5634aa39a031e26d80ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 18
 --- !u!50 &1801562968699342917
 Rigidbody2D:
   serializedVersion: 4

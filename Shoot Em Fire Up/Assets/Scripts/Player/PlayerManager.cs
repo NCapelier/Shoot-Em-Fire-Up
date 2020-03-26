@@ -83,6 +83,7 @@ namespace Game
         void Death()
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+            gameObject.transform.position = Vector2.zero;
         }
 
         void ResetGame()

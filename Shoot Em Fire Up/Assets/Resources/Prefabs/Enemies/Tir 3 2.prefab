@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1801562968699342917}
   - component: {fileID: 1801562968699342918}
   - component: {fileID: 3663055169969044824}
+  - component: {fileID: 4690150390034342701}
   m_Layer: 0
   m_Name: Tir 3 2
   m_TagString: Untagged
@@ -143,4 +144,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3fbcadaef126e4eb5658faed708c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
+--- !u!114 &4690150390034342701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801562968699342922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb550ee2b82ef4297faa9dd67c71a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
