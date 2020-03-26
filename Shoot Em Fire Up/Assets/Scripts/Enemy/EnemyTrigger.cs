@@ -34,6 +34,11 @@ namespace Game
                 hp--;
                 Destroy(collision.gameObject);
             }
+            if(collision.tag == "Death")
+            {
+                GetComponentInParent<EnemyManager>().mustDie = true;
+                Destroy(gameObject);
+            }
         }
 
     }

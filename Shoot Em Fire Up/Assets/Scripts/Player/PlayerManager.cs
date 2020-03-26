@@ -14,6 +14,13 @@ namespace Game
         [SerializeField] int startingHp = 50;
 
         [SerializeField] Text hpText = null;
+        [SerializeField] Text PointsText = null;
+
+        [HideInInspector] public int points = 0;
+
+        bool canTakeDmg = true;
+
+        bool s1 = false, s2 = false, s3 = false, s4 = false, s5 = false, s6 = false, s7 = false, s8 = false, s9 = false, s10 = false;
 
         #region Properties
 
@@ -21,14 +28,19 @@ namespace Game
         {
             set
             {
-                hp -= value;
-                if(hp <= 0)
+                if(canTakeDmg)
                 {
-                    ResetGame();
-                }
-                else
-                {
-                    Death();
+                    canTakeDmg = false;
+                    StartCoroutine(Invunerability());
+                    hp -= value;
+                    if (hp <= 0)
+                    {
+                        ResetGame();
+                    }
+                    else
+                    {
+                        Death();
+                    }
                 }
             }
         }
@@ -66,6 +78,8 @@ namespace Game
                 hpText.text = "HP : 99+";
             }
 
+            PointsText.text = "Points : " + points;
+
 
             if(Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -76,19 +90,81 @@ namespace Game
                 TakeDamage = 1;
             }
 
+            BonusHp();
+
         }
 
         #endregion
 
+        void BonusHp()
+        {
+            if(hp > 100 && s1 == false)
+            {
+                s1 = true;
+                hp++;
+            }
+            else if (hp > 200 && s2 == false)
+            {
+                s2 = true;
+                hp++;
+            }
+            else if(hp > 300 && s3 == false)
+            {
+                s3 = true;
+                hp++;
+            }
+            else if(hp > 400 && s4 == false)
+            {
+                s4 = true;
+                hp++;
+            }
+            else if(hp > 500 && s5 == false)
+            {
+                s5 = true;
+                hp++;
+            }
+            else if(hp > 600 && s6 == false)
+            {
+                s6 = true;
+                hp++;
+            }
+            else if(hp > 700 && s7 == false)
+            {
+                s7 = true;
+                hp++;
+            }
+            else if(hp > 800 && s8 == false)
+            {
+                s8 = true;
+                hp++;
+            }
+            else if(hp > 900 && s9 == false)
+            {
+                s9 = true;
+                hp++;
+            }
+            else if(hp > 1000 && s10 == false)
+            {
+                s10 = true;
+                hp++;
+            }
+        }
+
         void Death()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-            gameObject.transform.position = Vector2.zero;
+            gameObject.transform.position = new Vector2(0,3);
         }
 
         void ResetGame()
         {
+            Destroy(gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Main_Menu");
+        }
+
+        IEnumerator Invunerability()
+        {
+            yield return new WaitForSeconds(1f);
+            canTakeDmg = true;
         }
 
     }
