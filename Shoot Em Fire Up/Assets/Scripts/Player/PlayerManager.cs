@@ -152,13 +152,14 @@ namespace Game
 
         void Death()
         {
+            //Instantiate(Resources.Load("Prefabs/Enemies/animationMortPlayer"), gameObject.transform.position, Quaternion.identity);
             gameObject.transform.position = new Vector2(0,3);
         }
 
         void ResetGame()
         {
             Destroy(gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Main_Menu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
         }
 
         IEnumerator Invunerability()

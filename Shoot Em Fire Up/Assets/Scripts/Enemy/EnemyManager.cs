@@ -11,6 +11,8 @@ namespace Game
 
         [HideInInspector] public bool mustDie = false;
 
+        [SerializeField] GameObject deathPrefab = null;
+
         void Awake()
         {
             
@@ -28,7 +30,8 @@ namespace Game
 
         private void OnDestroy()
         {
-            if(mustDie == false)
+            //Instantiate(deathPrefab, gameObject.transform.position, Quaternion.identity);
+            if (mustDie == false)
             {
                 PlayerManager.Instance.points += points;
             }
